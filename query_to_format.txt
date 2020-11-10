@@ -1,0 +1,24 @@
+SELECT
+    Id,
+    Subscription__r.Id,
+    Subscription__r.ccrz__RecurringPrice__c,
+    Subscription__r.ccrz__CurrencyISOCode__c,
+    Subscription__r.ccrz__SubscriptionProduct__r.ccrz__TaxRateId__c,
+    Subscription__r.ccrz__SubscriptionProduct__r.ccrz__SKU__c,
+    Subscription__r.ccrz__SubscriptionProduct__r.Product_Full_Name__c,
+    Subscription__r.ccrz__CCOrder__r.ccrz__BillTo__r.ccrz__City__c,
+    Subscription__r.ccrz__CCOrder__r.ccrz__BillTo__r.ccrz__StateISOCode__c,
+    Subscription__r.ccrz__CCOrder__r.ccrz__BillTo__r.ccrz__CountryISOCode__c,
+    Subscription__r.ccrz__CCOrder__r.ccrz__BillTo__r.ccrz__PostalCode__c,
+    Subscription__r.ccrz__User__r.Name,
+    Subscription__r.ccrz__User__r.Account_Number__c,
+    Subscription__r.ccrz__CCOrder__c,
+    Subscription__r.ccrz__CCOrder__r.Name,
+    Subscription__r.ccrz__CCOrder__r.ccrz__BillTo__r.ccrz__AddressFirstline__c,
+    Subscription__r.ccrz__CCOrderItem__c,
+    ccrz__RemainingAmount__c,
+    ccrz__OriginalAmount__c,
+    SubtotalAmount__c,
+    TaxAmount__c
+FROM ccrz__E_Invoice__c
+LIMIT 100
